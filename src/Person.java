@@ -1,19 +1,24 @@
-public class CreateClient {
-    String name;
-    String user;
-    String email;
-    String pass;
-    int nif;
+import java.util.ArrayList;
 
-    public CreateClient() {
+public class Person {
+    private String name;
+    private String user;
+    private String email;
+    private String pass;
+    private String nif;
+    private int balance;
+
+    public Person() {
     }
 
-    public CreateClient(String name, String user, String email, String pass, int nif) {
+
+    public Person(String name, String user, String email, String pass, String nif, int balance) {
         this.name = name;
         this.user = user;
         this.email = email;
         this.pass = pass;
         this.nif = nif;
+        this.balance=balance;
     }
 
     public String getName() {
@@ -48,15 +53,23 @@ public class CreateClient {
         this.pass = pass;
     }
 
-    public int getNif() {
+    public String getNif() {
         return nif;
     }
 
-    public void setNif(int nif) {
+    public void setNif(String nif) {
         this.nif = nif;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     public String toString() {
-        return getName() + " " + getUser() + " " + getEmail() + " " + getNif() + " " + getPass();
+        return getName() + " " + getUser() + " " + getEmail() + " " + getPass() + " " + getNif();
     }
 }
