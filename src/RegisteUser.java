@@ -1,58 +1,54 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
+public class RegisteUser {
 
-public class CreateUser {
-    public void addUsers() {
+    public static void addUsers() {
         Scanner scanner = new Scanner(System.in);
-        Person user = new Person();
+        Person person = new Person();
+
         String password = "";
         String nif = "";
         String email = "";
         System.out.print("Name: ");
-        user.setName(scanner.next());
+        Person.setName(scanner.next());
         System.out.print("User: ");
-        user.setUser(scanner.next());
+        Person.setUser(scanner.next());
 
         while (!Checker.validEmail(email)) {
             System.out.print("Email: ");
             email = scanner.next();
             if (Checker.validEmail(email)) {
-                user.setEmail(email);
+                Person.setEmail(email);
             }
             if (!Checker.validEmail(email)) {
                 System.out.println(Color.RED_BOLD + "Your password:" +
-                        "Letters Uppercase and Lowercase");
+                        "Letters Uppercase and Lowercase" + "\033[39m" + "\033[49m");
             }
         }
         while (!Checker.passValid(password)) {
             System.out.print("Password: ");
             password = scanner.next();
             if (Checker.passValid(password)) {
-                user.setPass(password);
+                Person.setPass(password);
             }
             if (!Checker.passValid(password)) {
                 System.out.println(Color.RED_BOLD + "Your password:" +
-                        "Letters Uppercase and Lowercase");
+                        "Letters Uppercase and Lowercase" + "\033[39m" + "\033[49m");
             }
         }
         while (!Checker.validNif(nif)) {
             System.out.print("NIF: ");
             nif = scanner.next();
             if (Checker.validNif(nif)) {
-                user.setNif(nif);
+                Person.setNif(nif);
             }
             if (!Checker.validNif(nif)) {
-                System.out.println(Color.RED_BOLD + "NIF has to have 9 digits!");
+                System.out.println(Color.RED_BOLD + "NIF has to have 9 digits!" + "\033[39m" + "\033[49m");
             }
         }
-        DataBase.users.add(user);
+
+        DataBase.users.add(person);
     }
 
-    public void printUsers() {
-        System.out.println("Name:" + " | " + "User: " + " | " + "Email: " + " | " + "Password: " + " | " + "NIF: ");
-        for (Person users : DataBase.users) {
-            System.out.println(users);
-        }
-    }
+
 }

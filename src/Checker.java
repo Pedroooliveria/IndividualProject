@@ -1,7 +1,9 @@
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Checker {
+
     private static final String password =
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
     private static final Pattern pattern = Pattern.compile(password);
@@ -13,7 +15,6 @@ public class Checker {
     private static final Pattern pattern2 = Pattern.compile(email);
 
 
-
     public static boolean passValid(final String password) {
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
@@ -23,13 +24,21 @@ public class Checker {
         Matcher matcher = pattern1.matcher(nif);
         return matcher.matches();
     }
+
     public static boolean validEmail(final String email) {
         Matcher matcher = pattern2.matcher(email);
         return matcher.matches();
     }
 
-    public static boolean checkUser(String User) {
-        return true;
+
+    public static int check(int nrSerie) {
+        for (int i = 0; i < DataBase.product.size(); i++) {
+            if (nrSerie == DataBase.product.get(i).getNrSerie()) {
+                return i;
+            }
+
+        }
+        return 0;
     }
 
 }
