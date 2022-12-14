@@ -1,72 +1,96 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Person {
-    private static String name;
-    private static String user;
-    private static String email;
-    private static String pass;
-    private static String nif;
-    private static int balance;
+
+    private String name;
+    private String user;
+    private String email;
+    private String pass;
+    private String nif;
+    private int balance;
+    private boolean loggedIn;
 
     public Person() {
     }
 
 
     public Person(String name, String user, String email, String pass, String nif, int balance) {
-        Person.name = name;
-        Person.user = user;
-        Person.email = email;
-        Person.pass = pass;
-        Person.nif = nif;
-        Person.balance=balance;
+        this.name = name;
+        this.user = user;
+        this.email = email;
+        this.pass = pass;
+        this.nif = nif;
+        this.balance = balance;
     }
 
-    public static String getName() {
+    public boolean login() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.print("Password: ");
+        if (scanner.next().equals(getPass())) {
+            this.loggedIn = true;
+
+            return true;
+        }
+        return false;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        Person.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static String getUser() {
+    public String getUser() {
         return user;
     }
 
-    public static void setUser(String user) {
-        Person.user = user;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public static void setEmail(String email) {
-        Person.email = email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public static String getPass() {
+    public String getPass() {
         return pass;
     }
 
-    public static void setPass(String pass) {
-        Person.pass = pass;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
-    public static String getNif() {
+    public String getNif() {
         return nif;
     }
 
-    public static void setNif(String nif) {
-        Person.nif = nif;
+    public void setNif(String nif) {
+        this.nif = nif;
     }
 
-    public static int getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public static void setBalance(int balance) {
-        Person.balance = balance;
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
     }
 
     public String toString() {

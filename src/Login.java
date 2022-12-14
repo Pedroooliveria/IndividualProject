@@ -1,25 +1,37 @@
 import java.util.Scanner;
 
 public class Login {
-    public static void login() {
+    private static Person currentUser = DataBase.getActualUser();
+
+
+    public static boolean loginProcedure() {
         Scanner scanner = new Scanner(System.in);
-        String nameUser = "";
-        String password = "";
-        int count = 0;
+        Person person = null;
+        System.out.println("Login: ");
+        System.out.println("Username: ");
+        person = checkLogin(scanner.next());
+        if (person == null) {
+            return false;
 
+        }
+        if (person.login()) {
+            currentUser = person;
+            MenuClient.menu();
+            return true;
+        } else {
+            System.out.println(Color.RED_BOLD + "Your username or password " + "\033[39m" + "\033[49m");
+            return false;
 
-        while (!DataBase.checkLogin(nameUser, password) && count < 3) {
-            System.out.print("User name: ");
-            nameUser = scanner.nextLine();
-            System.out.print("Password: ");
-            password = scanner.nextLine();
-            if (DataBase.checkLogin(nameUser, password)) {
-                System.out.println("Hello");
-            }
-            if (!DataBase.checkLogin(nameUser, password)) {
-                System.out.println(Color.RED_BOLD + "Your user Name or password its wrong." + "\033[39m" + "\033[49m");
-                count++;
+        }
+    }
+
+    public static Person checkLogin(String userName) {
+        for (int i = 0; i < DataBase.users.size(); i++) {
+            if (userName.equals(DataBase.users.get(i).getUser())) {
+                return DataBase.users.get(i);
             }
         }
+        System.out.println(Color.RED_BOLD + "User not found" + "\033[39m" + "\033[49m");
+        return null;
     }
 }

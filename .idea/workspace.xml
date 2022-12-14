@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10b2f329-d7a9-4e88-b74f-b6ad3e904620" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AddProducts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MenuClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrintProductsUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuUser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisteUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +70,23 @@
       <option name="project" value="LOCAL" />
       <updated>1670633690139</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix bug add user">
+      <created>1670935882926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670935882926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create method add, and starting mothod login." />
     <MESSAGE value="Create normal user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create normal user." />
+    <MESSAGE value="fix bug add user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug add user" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/IndividualProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1670935848950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

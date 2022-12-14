@@ -1,44 +1,44 @@
 public class Products {
-    private static String nameProduct;
-    private static int stock;
-    private static int nrSerie;
-    private static double price;
+    private  String nameProduct;
+    private  int stock;
+    private  int nrSerie;
+    private  double price;
 
     public Products() {
     }
 
 
 
-    public static String getNameProduct() {
+    public  String getNameProduct() {
         return nameProduct;
     }
 
-    public static void setNameProduct(String nameProduct) {
-        Products.nameProduct = nameProduct;
+    public  void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
     }
 
-    public static int getStock() {
+    public  int getStock() {
         return stock;
     }
 
-    public static void setStock(int stock) {
-        Products.stock = stock;
+    public  void setStock(int stock) {
+        this.stock = stock;
     }
 
-    public static int getNrSerie() {
+    public  int getNrSerie() {
         return nrSerie;
     }
 
-    public static void setNrSerie(int serie) {
-        nrSerie = serie;
+    public  void setNrSerie(int serie) {
+        this.nrSerie = serie;
     }
 
-    public static double getPrice() {
+    public  double getPrice() {
         return price;
     }
 
-    public static void setPrice(double price) {
-        Products.price = price;
+    public  void setPrice(double price) {
+        this.price = price;
     }
 
     public String toString() {
