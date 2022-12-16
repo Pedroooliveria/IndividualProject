@@ -41,4 +41,14 @@ public class Checker {
         return 0;
     }
 
+    public static Products checkProducts(String userName) {
+        for (int i = 0; i < DataBase.product.size(); i++) {
+            if (userName.equals(DataBase.product.get(i).getNameProduct())) {
+                return DataBase.product.get(i);
+            }
+        }
+        System.out.println(Color.RED_BOLD + "Don´t exist this product" + "\033[39m" + "\033[49m");
+        return null;
+    }
+
 }

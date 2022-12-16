@@ -39,16 +39,21 @@ public class RegisteUser {
             }
         }
         while (!Checker.validNif(nif)) {
-            System.out.print("NIF: ");
-            nif = scanner.next();
-            if (Checker.validNif(nif)) {
-                person.setNif(nif);
-            }
-            if (!Checker.validNif(nif)) {
-                System.out.println(Color.RED_BOLD + "NIF has to have 9 digits!" + "\033[39m" + "\033[49m");
-            }
+                System.out.print("NIF: ");
+                nif = scanner.next();
+                if (Checker.validNif(nif)) {
+                    person.setNif(nif);
+                }
+                if (!Checker.validNif(nif)) {
+                    System.out.println(Color.RED_BOLD + "NIF has to have 9 digits!" + "\033[39m" + "\033[49m");
+                }
+
+
         }
-        DataBase.users.add(person);
+        if (DataBase.users.add(person)) {
+            Menu.menuLogin();
+        }
+
         System.out.println(DataBase.users);
     }
 

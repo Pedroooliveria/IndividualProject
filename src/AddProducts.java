@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Scanner;
 
 public class AddProducts {
@@ -8,7 +7,7 @@ public class AddProducts {
         Products products = new Products();
         System.out.print("Nr Serie: ");
         products.setNrSerie(scanner.nextInt());
-        System.out.print("Add product: ");
+        System.out.print("Name: ");
         products.setNameProduct(scanner.next());
         System.out.print("Stock: ");
         products.setStock(scanner.nextInt());
@@ -19,11 +18,13 @@ public class AddProducts {
 
     public static void alterPrice() {
         Scanner scanner = new Scanner(System.in);
+        int index;
+        int nrSerie;
         Products products = new Products();
-        System.out.print("Write player number: ");
-        int nrSerie = scanner.nextInt();
-        int index = Checker.check(nrSerie);
-        System.out.print("Goals:");
+        System.out.print("Serial number: ");
+        nrSerie = scanner.nextInt();
+        index = Checker.check(nrSerie);
+        System.out.print("Value: ");
         products.setPrice(scanner.nextDouble());
 
     }

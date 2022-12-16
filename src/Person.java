@@ -8,7 +8,7 @@ public class Person {
     private String email;
     private String pass;
     private String nif;
-    private int balance;
+    private double balance;
     private boolean loggedIn;
 
     public Person() {
@@ -27,7 +27,7 @@ public class Person {
     public boolean login() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println();
+
         System.out.print("Password: ");
         if (scanner.next().equals(getPass())) {
             this.loggedIn = true;
@@ -77,11 +77,11 @@ public class Person {
         this.nif = nif;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
