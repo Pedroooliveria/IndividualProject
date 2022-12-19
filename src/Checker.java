@@ -50,5 +50,29 @@ public class Checker {
         System.out.println(Color.RED_BOLD + "Don´t exist this product" + "\033[39m" + "\033[49m");
         return null;
     }
+    public static boolean checkNrSerie(Products nrSerie) {
+        for (Products eachNrSerie : DataBase.product) {
+            if (Objects.equals(eachNrSerie.getNrSerie(), nrSerie.getNrSerie())) {
+                return true;
+            }
+        }
+        return false;
+    }
+   public static boolean checkUser(Person user) {
+        for (Person eachUser : DataBase.users) {
+            if (Objects.equals(eachUser.getUser(), user.getUser())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean checkNif(Person nif) {
+        for (Person eachNif : DataBase.users) {
+            if (Objects.equals(eachNif.getNif(), nif.getNif())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

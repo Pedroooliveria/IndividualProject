@@ -5,13 +5,16 @@ public class Operation {
     private static Person currentUser = DataBase.getCurrentUser();
 
 
-
     public static void addBalance() {
         Scanner scanner = new Scanner(System.in);
         Person person = DataBase.getCurrentUser();
+        try {
+            System.out.print("Add balance: ");
+            currentUser.setBalance(currentUser.getBalance() + scanner.nextInt());
+        } catch (Exception e) {
+            System.out.println(Color.RED_BOLD + "Number not recognize" + "\033[39m" + "\033[49m");
+        }
 
-        System.out.print("Add balance: ");
-        currentUser.setBalance(currentUser.getBalance() + scanner.nextInt());
         PrintProductsUsers.printUsers();
         PrintProductsUsers.printProducts();
     }
@@ -28,7 +31,7 @@ public class Operation {
         if (products.stock()) {
             currentProduct = products;
             checkOut(products.getPrice());
-            System.out.print ("TOTAL: ");
+            System.out.print("TOTAL: ");
             System.out.println(products.getPrice() + "€");
 
         }
@@ -44,7 +47,7 @@ public class Operation {
             return;
         }
         if (currentBalance <= -1) {
-            System.out.println("Your balance isn´t enough for this product");
+            System.out.println(Color.RED_BOLD + "Your balance isn´t enough for this product" + "\033[39m" + "\033[49m");
         }
 
     }

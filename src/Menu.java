@@ -15,21 +15,28 @@ public class Menu {
                 ██║  ██║██████╔╝██║ ╚═╝ ██║ ██║ ██║ ╚███║
                 ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝ ╚═╝ ╚═╝  ╚══╝""");
         String choice = "";
-        while (!choice.equals("5")) {
+        while (!choice.equals("4")) {
             System.out.println("Menu");
             System.out.println("1- Add products");
             System.out.println("2- Alter price");
             System.out.println("3- Manage clients");
-            System.out.println("4- ");
-            System.out.println("5- Logout");
+            System.out.println("4- Logout");
             choice = scanner.next();
 
             switch (choice) {
-                case "1" -> AddProducts.addProducts();
+                case "1" -> {
+                    try{
+                        AddProducts.addProducts();
+                    }catch (Exception e){
+                        System.out.println("Only accept numbers");
+                    }
+                }
                 case "2" -> AddProducts.alterPrice();
-                case "3" -> PrintProductsUsers.printUsers();
-                case "4" -> System.out.println();
-                case "5" -> Login.LogOut();
+                case "3" -> {
+                    PrintProductsUsers.printUsers();
+                    RegisteUser.remUser();
+                }
+                case "4" -> Login.LogOut();
 
             }
 
@@ -59,6 +66,7 @@ public class Menu {
                     Operation.addBalance();
                     break;
                 case "2":
+                    PrintProductsUsers.printProducts();
                     Operation.buyProduct();
 
                     break;

@@ -14,7 +14,7 @@ public class Login {
             if (person == null) {
                 return;
             }
-            if (person == checkLogin("admin")) {
+            if (person.getUser().equals("admin")) {
                 if (person.login()) {
                     DataBase.setCurrentUser(person);
                     Menu.menuAdmin();
@@ -37,6 +37,8 @@ public class Login {
         for (int i = 0; i < DataBase.users.size(); i++) {
             if (userName.equals(DataBase.users.get(i).getUser())) {
                 return DataBase.users.get(i);
+
+
             }
         }
         System.out.println(Color.RED_BOLD + "User not found" + "\033[39m" + "\033[49m");
