@@ -40,10 +40,10 @@ public class RegisteUser {
                 person.setPass(password);
             }
             if (!Checker.passValid(password)) {
-                System.out.println(Color.RED_BOLD + "Your password:" +
-                        "Letters Uppercase and Lowercase" +
-                        "Special charters" +
-                        "Numbers" + "\033[39m" + "\033[49m");
+                System.out.println(Color.RED_BOLD + "Your password need:" +
+                        "Letters Uppercase and Lowercase " +
+                        "Special charters " +
+                        "Numbers " + "\033[39m" + "\033[49m");
             }
         }
 

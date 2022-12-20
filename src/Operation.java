@@ -15,8 +15,8 @@ public class Operation {
             System.out.println(Color.RED_BOLD + "Number not recognize" + "\033[39m" + "\033[49m");
         }
 
-        PrintProductsUsers.printUsers();
-        PrintProductsUsers.printProducts();
+        System.out.println(currentUser);
+
     }
 
 
